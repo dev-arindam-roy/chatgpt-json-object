@@ -199,6 +199,7 @@ function renderJson() {
     let jsonString = createNewJson();
     document.getElementById('jsonOutput').innerHTML = `<pre class="line-numbers" style="border-radius: 0; margin-top: 0;"><code class="language-json">${jsonString}</code></pre>`;
     Prism.highlightAll();
+    document.getElementById('jsonOutputBox').scrollTo({top: 0, behavior: 'smooth'});
 }
 
 function createNewJson() {
@@ -236,7 +237,7 @@ function createNewJson() {
     }
     finalArr['status'] = statusArr[Math.floor(Math.random() * statusArr.length)];
     finalArr['report_generate_date'] = currentRandomDate();
-    
+
     return JSON.stringify(finalArr, null, 4);
 }
 

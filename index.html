@@ -16,7 +16,22 @@
 <body>
 
 <div class="container mt-3">
+    <div class="row mb-2">
+        <div class="col-sm-6">
+            <button type="button" class="btn btn-primary" onclick="newJson();">Generate New Json</button>
+        </div>
+        <div class="col-sm-6"></div>
+    </div>
     <div class="row">
+        <!-- JSON OUTPUT -->
+        <div class="col-sm-6" id="jsonOutputBox" style="max-height: 500px; overflow: auto;">
+            <div class="card">
+                <div class="card-header">Your Json - Copy & Parse/Evaluate</div>
+                <div class="card-body" id="jsonOutput" style="min-height: 455px; padding: 0;">
+                    
+                </div>
+            </div>
+        </div>
         <!-- CODE -->
         <div class="col-sm-6" style="max-height: 500px; overflow: auto;">
             <div class="card">
@@ -57,15 +72,6 @@
                             document.getElementById('jsonOutput').innerHTML = JSON.stringify(finalArr, null, 4);
                         </code>
                     </pre>
-                </div>
-            </div>
-        </div>
-        <!-- JSON OUTPUT -->
-        <div class="col-sm-6" style="max-height: 500px; overflow: auto;">
-            <div class="card">
-                <div class="card-header">Your Json - Copy & Parse/Evaluate</div>
-                <div class="card-body" id="jsonOutput" style="min-height: 455px; padding: 0;">
-                    
                 </div>
             </div>
         </div>
