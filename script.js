@@ -193,6 +193,7 @@ const statusArr = ["Active", "Inactive"];
 function newJson() {
     displayPlaceholder();
     setTimeout(renderJson, 3000);
+    window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
 function renderJson() {
